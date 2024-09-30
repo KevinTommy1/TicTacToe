@@ -14,12 +14,9 @@ public class PlayerTurn : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (unplayed)
-        {
-            int index = gameBoard.GetComponent<GameScript>().PlayerTurn();
-            spriteRenderer.sprite = images[index];
-            unplayed = false;
-        }
+        if (!unplayed) return;
+        spriteRenderer.sprite = images[gameBoard.GetComponent<GameScript>().PlayerTurn()];
+        unplayed = false;
     }
 
     private void Awake()
