@@ -192,14 +192,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TokenMR
       objectReference: {fileID: 0}
-    - target: {fileID: 8997297290327903278, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: images.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8997297290327903278, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 40fe3ffece74a1841b0ba3d561e9660b, type: 3}
     m_RemovedComponents:
     - {fileID: 8994904694838774254, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
     m_RemovedGameObjects: []
@@ -339,14 +331,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TokenTL
       objectReference: {fileID: 0}
-    - target: {fileID: 8997297290327903278, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: images.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8997297290327903278, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 40fe3ffece74a1841b0ba3d561e9660b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -412,14 +396,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TokenTC
       objectReference: {fileID: 0}
-    - target: {fileID: 8997297290327903278, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: images.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8997297290327903278, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 40fe3ffece74a1841b0ba3d561e9660b, type: 3}
     m_RemovedComponents:
     - {fileID: 8994904694838774254, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
     m_RemovedGameObjects: []
@@ -597,14 +573,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TokenLC
       objectReference: {fileID: 0}
-    - target: {fileID: 8997297290327903278, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: images.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8997297290327903278, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 40fe3ffece74a1841b0ba3d561e9660b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -675,14 +643,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TokenTR
       objectReference: {fileID: 0}
-    - target: {fileID: 8997297290327903278, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: images.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8997297290327903278, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 40fe3ffece74a1841b0ba3d561e9660b, type: 3}
     m_RemovedComponents:
     - {fileID: 8994904694838774254, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
     m_RemovedGameObjects: []
@@ -749,14 +709,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TokenLR
       objectReference: {fileID: 0}
-    - target: {fileID: 8997297290327903278, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: images.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8997297290327903278, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 40fe3ffece74a1841b0ba3d561e9660b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -770,14 +722,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1789397404}
     m_Modifications:
-    - target: {fileID: 742728047273270410, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 742728047273270410, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 742728047273270410, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1063,14 +1007,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TokenLL
       objectReference: {fileID: 0}
-    - target: {fileID: 8997297290327903278, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: images.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8997297290327903278, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
-      propertyPath: images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 40fe3ffece74a1841b0ba3d561e9660b, type: 3}
     m_RemovedComponents:
     - {fileID: 8994904694838774254, guid: 57dc4c4e004979d40890a9435d3563ce, type: 3}
     m_RemovedGameObjects: []

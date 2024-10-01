@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerTurn : MonoBehaviour
@@ -6,46 +7,65 @@ public class PlayerTurn : MonoBehaviour
     GameObject gameBoard;
     public Sprite[] images;
     private bool unplayed = true;
-    private bool playerTurn = true;
 
-    private void Start()
+    static List<GameObject> unplayedTokens = new List<GameObject>();
+
+    void Start()
     {
+        //Initialize the list of unplayed tokens
+        Transform[] tokens = gameBoard.GetComponentsInChildren<Transform>();
+        foreach (Transform token in tokens)
+        {
+            if (token.gameObject != gameObject && token.gameObject != gameBoard)
+            {
+                unplayedTokens.Add(token.gameObject);
+            }
+        }
+
         spriteRenderer.sprite = null;
     }
 
     private void OnMouseDown()
     {
-        if (gameBoard.GetComponent<GameScript>().PlayerTurn() == 0) // Assuming 0 is the player's turn
+        if (gameBoard.GetComponent<GameScript>().PlayerTurn() != 0) return; // Assuming 0 is the player's turn
+        spriteRenderer.sprite = images[gameBoard.GetComponent<GameScript>().PlayerTurn()];
+        gameBoard.GetComponent<GameScript>().PlayerTurn(); // Advance to the AI's turn
+        AiTurn();
+        if (unplayedTokens.Contains(gameObject))
         {
-            spriteRenderer.sprite = images[gameBoard.GetComponent<GameScript>().PlayerTurn()];
-            gameBoard.GetComponent<GameScript>().PlayerTurn(); // Advance to the AI's turn
-            AiTurn();
+            unplayedTokens.Remove(gameObject);
         }
     }
 
     void AiTurn()
     {
-        if (gameBoard.GetComponent<GameScript>().PlayerTurn() == 1) // Assuming 1 is the AI's turn
+        if (gameBoard.GetComponent<GameScript>().PlayerTurn() != 1) return;
+        GameObject token = SelectToken();
+        if (token == null) return;
+        token.GetComponent<SpriteRenderer>().sprite = images[gameBoard.GetComponent<GameScript>().PlayerTurn()];
+        gameBoard.GetComponent<GameScript>().PlayerTurn();
+        if (unplayedTokens.Contains(token))
         {
-            // Select a random token on the gameboard
-            GameObject token = SelectToken();
-            if (token != null && unplayed)
-            {
-                // Update the sprite for the selected token
-                token.GetComponent<SpriteRenderer>().sprite = images[Random.Range(0, images.Length)];
-                gameBoard.GetComponent<GameScript>().PlayerTurn(); // Advance to the player's turn
-            }
+            unplayedTokens.Remove(token);
         }
     }
 
     GameObject SelectToken()
     {
-        // This method should return a random token on the gameboard
-        // You can implement this method based on your game's logic
-        // For example, you could use a list of all tokens on the gameboard and select one at random
-        // For now, let's just return a random child of the gameboard
-        Transform[] tokens = gameBoard.GetComponentsInChildren<Transform>();
-        return tokens[Random.Range(0, tokens.Length)].gameObject;
+        // Select a random token from the list of unplayed tokens
+        if (unplayedTokens.Count > 0)
+        {
+            GameObject token = unplayedTokens[Random.Range(0, unplayedTokens.Count)];
+            if (unplayedTokens.Contains(token))
+            {
+                unplayedTokens.Remove(token);
+            }
+            return token;
+        }
+        else
+        {
+            return null;
+        }
     }
 
     private void Awake()
